@@ -1,0 +1,5 @@
+(library
+ (name leaflet)
+ (libraries brr)
+ (preprocess
+  (pps ppx_deriving_brr)))

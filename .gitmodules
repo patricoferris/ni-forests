@@ -1,0 +1,7 @@
+[submodule "ppx_deriving_brr"]
+	path = ppx_deriving_brr
+	url = https://github.com/patricoferris/ppx_deriving_brr
+[submodule "lwd"]
+	path = lwd
+	url = https://github.com/patricoferris/lwd
+	branch = brr

@@ -1,0 +1,14 @@
+(executable
+ (name index)
+ (modes js)
+ (modules index text)
+ (preprocess (pps ppx_deriving_brr))
+ (js_of_ocaml (javascript_files raw/ni-counties.js raw/ni-counties-data.js))
+ (libraries js_of_ocaml brr-lwd leaflet))
+
+(rule
+ (deps 
+   text/html/0_intro.html)
+ (targets text.ml)
+ (action 
+   (with-stdout-to text.ml (run ocaml-crunch --mode=plain text/html))))

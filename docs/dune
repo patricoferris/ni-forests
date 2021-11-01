@@ -1,0 +1,6 @@
+(rule
+ (deps ../src/js/index.bc.js)
+ (targets ./index.js)
+ (mode promote-until-clean)
+ (action 
+  (copy %{deps} %{targets})))

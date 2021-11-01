@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forests in Northern Ireland</title>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.4.x/dist/typography.min.css"
+    />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+    <style>
+        a {
+            padding: 1px;
+        }
+
+        a:hover {
+            transition: ease-in-out 150ms;
+            background-color: rgb(172, 255, 151);
+            border-radius: 2px;
+        }
+        .info {
+            padding: 6px 8px;
+            font: 14px/16px Arial, Helvetica, sans-serif;
+            background: white;
+            background: rgba(255,255,255,0.8);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+        .info h4 {
+            margin: 0 0 5px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-full">
+        <main class="mt-24 pb-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div class="grid grid-cols-1 gap-4 items-start lg:grid-cols-5 lg:gap-8">
+                <div class="grid grid-cols-1 gap-4 lg:col-span-2">
+                <section aria-labelledby="section-1-title">
+                    <div class="p-6">
+                        <div id="main"></div>
+                    </div>
+                </section>
+                </div>
+                <div class="grid grid-cols-1 lg:col-span-3">
+                <section aria-labelledby="section-2-title">
+                    <div style="height: 700px" class="rounded-lg bg-white overflow-hidden shadow" id="map"></div> 
+                </section>
+                </div>
+            </div>
+            </div>
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
