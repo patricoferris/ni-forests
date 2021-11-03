@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="leading-tight" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forests in Northern Ireland</title>
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.4.x/dist/typography.min.css"
-    />
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="stylesheet" href="main.css">
     <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
     <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
     <style>
@@ -19,7 +19,8 @@
 
         a:hover {
             transition: ease-in-out 150ms;
-            background-color: rgb(172, 255, 151);
+            background-color: rgb(155, 255, 130);
+            color: black;
             border-radius: 2px;
         }
         .info {
@@ -36,9 +37,13 @@
         }
     </style>
 </head>
-<body>
-    <div class="min-h-full">
-        <main class="mt-24 pb-8">
+<body class="min-h-screen dark:bg-black">
+    <div class="flex p-4 space-x-4">
+        <div class="dark:text-white text-3xl font-bold">NI Forests</div>
+        <button class="dark:text-white" id="toggle">Toggle Darkness</button>
+    </div>
+    <div class="min-h-full bg-white dark:bg-black">
+        <main class="mt-24 pb-8 dark:bg-black">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
             <div class="grid grid-cols-1 gap-4 items-start lg:grid-cols-5 lg:gap-8">
                 <div class="grid grid-cols-1 gap-4 lg:col-span-2">

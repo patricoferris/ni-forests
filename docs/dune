@@ -1,6 +1,19 @@
 (rule
- (deps ../src/js/index.bc.js)
- (targets ./index.js)
+ (deps
+  ../src/js/index.bc.js
+  (source_tree ../node_modules)
+  index.html
+  ../tailwind.config.js)
+ (targets ./index.js ./main.css)
  (mode promote-until-clean)
- (action 
-  (copy %{deps} %{targets})))
+ (action
+  (progn
+   (copy ../src/js/index.bc.js ./index.js)
+   (run
+    node
+    ../node_modules/tailwindcss/lib/cli.js
+    build
+    -c
+    ../tailwind.config.js
+    -o
+    main.css))))

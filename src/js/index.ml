@@ -193,9 +193,13 @@ let action =
   | 4 -> 
     reset ();
     (* Apply the peatland data a little later than the reset *)
-    let _ : int = Brr.G.set_timeout ~ms:1000 @@ fun () -> Fut.await (peatland_data ()) (fun v -> let _ : Jv.t = peatland v map in ()) in 
-    ()
-    (* let _ : Jv.t = peatland map in () *)
+    let layer = ref None in 
+    let _ : int = Brr.G.set_timeout ~ms:2000 @@ fun () -> Fut.await (peatland_data ()) (fun v -> layer := Some (peatland v map)) in 
+    let reset_4 () = 
+      Option.iter (fun layer -> let _ = Jv.call (Leaflet.Map.to_jv map) "removeLayer" [| layer |] in ()) !layer;
+      zoom_to Default map
+    in
+    reset_ref := reset_4
   | _ -> ()
 
 (* ~~~ Text Viewer ~~~
@@ -233,7 +237,7 @@ module TextViewer = struct
     in
     let block =
       let ele = El.(div []) in 
-      set_classes ele [ "prose"; "overflow-x-scroll" ];
+      set_classes ele [ "prose"; "overflow-x-scroll"; "dark:prose-light" ];
       El.set_inline_style Jstr.(v "height") Jstr.(v "640px") ele;
       ele
     in
@@ -259,8 +263,22 @@ let map () =
   in 
   Map.to_map map
 
+(* Dark mode *)
+let dark_mode = 
+  let dark = ref true in 
+  fun () ->
+    match Document.find_el_by_id G.document (Jstr.v "toggle") with 
+      | Some btn -> 
+        let toggle () = 
+          El.set_class (Jstr.v "dark") !dark (Jv.get (Document.to_jv G.document) "documentElement" |> El.of_jv);
+          dark := not !dark
+        in
+        Ev.(listen click (fun _ -> toggle ()) @@ El.as_target btn)
+      | _ -> failwith "Errrr"
+
 let () = 
   let map = map () in
+  dark_mode ();
   match Document.find_el_by_id G.document (Jstr.v "main") with 
     | Some el -> onload el @@ TextViewer.make map
     | None -> failwith "Can't find main element"

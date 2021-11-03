@@ -3,10 +3,20 @@
  (rule
   (deps ../0_intro.md ../1_forests.md ../2_down.md ../3_new.md ../4_peat.md)
   (targets 0_intro.html 1_forests.html 2_down.html 3_new.html 4_peat.html)
-  (action 
-    (progn
-     (with-stdout-to 0_intro.html (run omd ../0_intro.md))
-     (with-stdout-to 1_forests.html (run omd ../1_forests.md))
-     (with-stdout-to 2_down.html (run omd ../2_down.md))
-     (with-stdout-to 3_new.html (run omd ../3_new.md))
-     (with-stdout-to 4_peat.html (run omd ../4_peat.md))))))
+  (action
+   (progn
+    (with-stdout-to
+     0_intro.html
+     (run omd ../0_intro.md))
+    (with-stdout-to
+     1_forests.html
+     (run omd ../1_forests.md))
+    (with-stdout-to
+     2_down.html
+     (run omd ../2_down.md))
+    (with-stdout-to
+     3_new.html
+     (run omd ../3_new.md))
+    (with-stdout-to
+     4_peat.html
+     (run omd ../4_peat.md))))))

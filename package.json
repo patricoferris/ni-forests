@@ -1,0 +1,11 @@
+{
+    "name": "ni-forests",
+    "version": "1.0.0",
+    "description": "OCaml.org website",
+    "author": "Patrick Ferris",
+    "license": "ISC",
+    "dependencies": {
+        "@tailwindcss/typography": "^0.4.1",
+        "tailwindcss": "^2.2.16"
+    }
+}
