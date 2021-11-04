@@ -1,4 +1,4 @@
-# Carbon beneath your feet
+## Carbon beneath your feet
 
 When discussing terrestrial carbon sinks most people would think of forests with trees and shrubs. For many people in Ireland (and other parts of the UK such as the Fens in eastern England) another important carbon sink they will be familiar with is peatland. 
 

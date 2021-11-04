@@ -12,7 +12,8 @@ let default_zoom = 8
 
 let set_inner_html el html = 
   let jv = El.to_jv el in 
-  Jv.set jv "innerHTML" (Jv.of_string html)
+  Jv.set jv "innerHTML" (Jv.of_string html);
+  Jv.set jv "scrollTop" (Jv.of_int 0)
 
 let set_classes el cls = 
   let set_cl cl = El.set_class (Jstr.v cl) true el in 
