@@ -239,7 +239,7 @@ module TextViewer = struct
     let block =
       let ele = El.(div []) in 
       set_classes ele [ "prose"; "overflow-x-scroll"; "dark:prose-light" ];
-      El.set_inline_style Jstr.(v "height") Jstr.(v "640px") ele;
+      El.set_inline_style Jstr.(v "height") Jstr.(v "600px") ele;
       ele
     in
     let* counter = 
