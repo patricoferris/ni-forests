@@ -13,11 +13,10 @@
     <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
     <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
     <style>
-        a {
+        p > a, #header > button {
             padding: 1px;
         }
-
-        a:hover {
+        p > a:hover, #header > button:hover {
             transition: ease-in-out 150ms;
             background-color: rgb(155, 255, 130);
             color: black;
@@ -38,9 +37,10 @@
     </style>
 </head>
 <body class="min-h-screen dark:bg-black">
-    <div class="flex p-4 space-x-4">
+    <div id="header" class="flex p-4 space-x-4">
         <div class="dark:text-white text-3xl font-bold">NI Forests</div>
         <button class="dark:text-white" id="toggle">Toggle Darkness</button>
+        <button><a href="text.html" class="dark:text-white">Text Only</a></button>
     </div>
     <div class="min-h-full bg-white dark:bg-black">
         <main class="mt-8 pb-8 dark:bg-black">

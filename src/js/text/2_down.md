@@ -14,7 +14,7 @@ bluntly for Ireland's Department of Agriculture, Food, and the Marine (DAFM).
 
 > ... DAFM are technically creating new forests
 > based on their own respective definitions, they are actually cultivating
-> monoculture tree plantations of single species—moreover, they are
+> monoculture tree plantations of single species - moreover, they are
 > doing so in areas with trees planted too close together for any wildlife
 > or other plant life to survive
 

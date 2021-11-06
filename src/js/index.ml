@@ -37,7 +37,7 @@ let counties : County.t list =
   Jv.to_jv_array jv |> Array.to_list
 
 
-let peatland_data =
+let fetch_data uri =
   let open Fut.Syntax in
   let cache = ref None in
   fun () ->
@@ -45,7 +45,7 @@ let peatland_data =
     | Some v -> Fut.return v
     | None ->
       (* Big Json :) *)
-      let request = Fetch.Request.v Jstr.(v "./ni-peatland.json") in 
+      let request = Fetch.Request.v Jstr.(v uri) in 
       let* data = Fetch.request request in
       match data with 
        | Error _ -> failwith "Error handling the peatland data" 
@@ -55,6 +55,9 @@ let peatland_data =
       let v = Jv.get ok "features" |> Jv.to_jv_array in
       cache := Some v;
       v
+
+let peatland_data = fetch_data "./ni-peatland.json"
+let seagrass_data = fetch_data "./ni-intertidal-seagrass.geojson"
 
 let amount_to_colour = 
   let minimum = List.fold_left min Float.max_float (List.map County.percentage counties) in 
@@ -139,10 +142,11 @@ let counties_and_forest_cover =
 
 (* Zooming to function *)
 
-type poi = Default | Cavehill 
+type poi = Default | Cavehill | Strangford_lough 
 let zoom_to ?(zoom = default_zoom) =
   let poi_to_latlng = function 
     | Cavehill -> Leaflet.LatLng.(create ~lat:54.6558683 ~lng:(-5.9521483) |> to_jv) 
+    | Strangford_lough -> Leaflet.LatLng.(create ~lat:54.5591563 ~lng:(-5.6714574) |> to_jv)
     | Default -> Leaflet.LatLng.(default_latlng |> to_jv) 
   in
   fun poi map -> 
@@ -150,19 +154,18 @@ let zoom_to ?(zoom = default_zoom) =
   ()
 
 (* Peatland *)
-let peatland data map = 
+let make_layer ?(color = "red") ?(opacity = 0.7) data map = 
   let geojson = ref None in
   let style _ft = 
     Jv.obj [| 
-      "fillColor", Jv.of_string @@ "red";
+      "fillColor", Jv.of_string color;
       "color", Jv.of_string "black";
       "weight", Jv.of_int 1;
-      "fillOpacity", Jv.of_float 0.7
+      "fillOpacity", Jv.of_float opacity
     |]
   in
   let m = Jv.call Leaflet.G.l "geoJson" [| Jv.of_jv_array data; Jv.obj [| "style", Jv.repr style; |] |] in
   geojson := Some m;
-  (* let control = Leaflet.Control.add_to ~map info in  *)
   Jv.call m "addTo" [| Leaflet.Map.to_jv map |]
     
 
@@ -171,7 +174,9 @@ let action =
   let reset () = 
     !reset_ref ()
   in
-  fun map -> function 
+  fun map i -> 
+  let satellite_layer = StyleLayer.create "mapbox://styles/mapbox/satellite-v9" in
+  match i with
   | 0 -> reset ()
   | 1 -> reset (); 
     let layer, reset_control = counties_and_forest_cover map in 
@@ -183,10 +188,9 @@ let action =
   | 2 -> 
     reset ()
   | 3 -> reset ();
-    let layer = StyleLayer.create "mapbox://styles/mapbox/satellite-v9" in
-    let _map = Map.add_layer (Map.of_jv @@ Leaflet.Map.to_jv map) (`Style layer) in
+    let _map = Map.add_layer (Map.of_jv @@ Leaflet.Map.to_jv map) (`Style satellite_layer) in
     let reset_3 () = 
-      let _ = Jv.call (Leaflet.Map.to_jv map) "removeLayer" [| StyleLayer.to_jv layer |] in 
+      let _ = Jv.call (Leaflet.Map.to_jv map) "removeLayer" [| StyleLayer.to_jv satellite_layer |] in 
       zoom_to Default map
     in
     reset_ref := reset_3;
@@ -195,9 +199,20 @@ let action =
     reset ();
     (* Apply the peatland data a little later than the reset *)
     let layer = ref None in 
-    let _ : int = Brr.G.set_timeout ~ms:2000 @@ fun () -> Fut.await (peatland_data ()) (fun v -> layer := Some (peatland v map)) in 
+    let _ : int = Brr.G.set_timeout ~ms:2000 @@ fun () -> Fut.await (peatland_data ()) (fun v -> layer := Some (make_layer v map)) in 
     let reset_4 () = 
       Option.iter (fun layer -> let _ = Jv.call (Leaflet.Map.to_jv map) "removeLayer" [| layer |] in ()) !layer;
+      zoom_to Default map
+    in
+    reset_ref := reset_4
+  | 5 -> 
+    reset ();
+    let layers = ref [ StyleLayer.to_jv satellite_layer ] in 
+    let _map = Map.add_layer (Map.of_jv @@ Leaflet.Map.to_jv map) (`Style satellite_layer) in
+    zoom_to ~zoom:13 Strangford_lough map;
+    let _ : int = Brr.G.set_timeout ~ms:2000 @@ fun () -> Fut.await (seagrass_data ()) (fun v -> layers := (make_layer ~color:"green" ~opacity:0.3 v map) :: !layers) in
+    let reset_4 () = 
+      let _ = List.iter (fun layer -> ignore @@ Jv.call (Leaflet.Map.to_jv map) "removeLayer" [| layer |]) !layers in 
       zoom_to Default map
     in
     reset_ref := reset_4
@@ -247,7 +262,9 @@ module TextViewer = struct
         let+ idx = Lwd.get idx in
         El.txt' (string_of_int (idx + 1) ^ "/" ^ string_of_int sections) 
       in 
-      Elwd.p [ `R text ]
+      let+ p = Elwd.p [ `R text ] in 
+      set_classes p [ "dark:text-white" ];
+      p
     in
     let* () = Lwd.map ~f:(fun idx -> set_inner_html block (read_file idx)) @@ Lwd.get idx in 
     let+ () = Lwd.map ~f:(action map) @@ Lwd.get idx in 
