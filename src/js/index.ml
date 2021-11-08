@@ -281,17 +281,20 @@ let map () =
   in 
   Map.to_map map
 
+let storage = Brr_io.Storage.local G.window
+let ni_forest_dark = Jstr.v "ni-forest-dark"
+
 (* Dark mode *)
-let dark_mode = 
-  let dark = ref true in 
+let dark_mode =
   fun () ->
+    let toggle ?(toggle = true) () =
+      let dark = match Brr_io.Storage.get_item storage ni_forest_dark with Some v -> Jstr.to_string v = "true" | _ -> false in
+      El.set_class (Jstr.v "dark") (if toggle then not dark else dark) (Jv.get (Document.to_jv G.document) "documentElement" |> El.of_jv);
+      ignore @@ Brr_io.Storage.set_item storage ni_forest_dark Jstr.(v @@ string_of_bool @@ (if toggle then not dark else dark))
+    in
+    toggle ~toggle:false ();
     match Document.find_el_by_id G.document (Jstr.v "toggle") with 
-      | Some btn -> 
-        let toggle () = 
-          El.set_class (Jstr.v "dark") !dark (Jv.get (Document.to_jv G.document) "documentElement" |> El.of_jv);
-          dark := not !dark
-        in
-        Ev.(listen click (fun _ -> toggle ()) @@ El.as_target btn)
+      | Some btn -> Ev.(listen click (fun _ -> toggle ()) @@ El.as_target btn)
       | _ -> failwith "Errrr"
 
 let () = 

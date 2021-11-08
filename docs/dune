@@ -22,13 +22,17 @@
 (rule
  (alias default)
  (mode promote-until-clean)
- (deps 
-  (:markdown (glob_files ../src/js/text/*.md)))
+ (deps
+  (:markdown
+   (glob_files ../src/js/text/*.md)))
  (targets text.html)
- (action 
-  (with-stdout-to text.html 
-    (progn
-     (run echo "<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<style>@media (min-width: 980px) { .content { width: 33%; margin: auto; }  } @media (max-width: 979px) { .content { width: 90%; margin: auto; } }</style></head>")
-     (run echo "<body><div class='content'>")
-     (run omd %{markdown})
-     (run echo "</div></body>")))))
+ (action
+  (with-stdout-to
+   text.html
+   (progn
+    (run
+     echo
+     "<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<style>@media (min-width: 980px) { .content { width: 33%; margin: auto; }  } @media (max-width: 979px) { .content { width: 90%; margin: auto; } }</style></head>")
+    (run echo "<body><div class='content'>")
+    (run omd %{markdown})
+    (run echo "</div></body>")))))

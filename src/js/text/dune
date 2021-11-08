@@ -1,8 +1,20 @@
 (subdir
  html
  (rule
-  (deps ../0_intro.md ../1_forests.md ../2_down.md ../3_new.md ../4_peat.md ../5_seagrass.md)
-  (targets 0_intro.html 1_forests.html 2_down.html 3_new.html 4_peat.html 5_seagrass.html)
+  (deps
+   ../0_intro.md
+   ../1_forests.md
+   ../2_down.md
+   ../3_new.md
+   ../4_peat.md
+   ../5_seagrass.md)
+  (targets
+   0_intro.html
+   1_forests.html
+   2_down.html
+   3_new.html
+   4_peat.html
+   5_seagrass.html)
   (action
    (progn
     (with-stdout-to
