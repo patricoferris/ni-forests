@@ -7,14 +7,16 @@
    ../2_down.md
    ../3_new.md
    ../4_peat.md
-   ../5_seagrass.md)
+   ../5_seagrass.md
+   ../6_reading.md)
   (targets
    0_intro.html
    1_forests.html
    2_down.html
    3_new.html
    4_peat.html
-   5_seagrass.html)
+   5_seagrass.html
+   6_reading.html)
   (action
    (progn
     (with-stdout-to
@@ -34,4 +36,7 @@
      (run omd ../4_peat.md))
     (with-stdout-to
      5_seagrass.html
-     (run omd ../5_seagrass.md))))))
+     (run omd ../5_seagrass.md))
+    (with-stdout-to
+     6_reading.html
+     (run omd ../6_reading.md))))))
