@@ -276,7 +276,7 @@ end
 
 let map () =
   set_access_token
-    "pk.eyJ1IjoicGF0cmljb2ZlcnJpcyIsImEiOiJja3V2azZoaGEwZXc4Mm9xZmVheG56Mm5jIn0.9VnfqNn5NaQg1jrtqkCyCQ";
+    "pk.eyJ1IjoicGF0cmljb2ZlcnJpcyIsImEiOiJja3V2a2ZlcmEwZXczMm5xZnRmZWoxOHl5In0.3qTahPB2TaJyK_yRQJuPpQ";
   let map = Map.create "map" in
   let map = Map.set_view ~latlng:default_latlng ~zoom:default_zoom map |> fun map ->
       Map.add_layer map
