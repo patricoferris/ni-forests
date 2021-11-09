@@ -243,7 +243,7 @@ module TextViewer = struct
   let make map =
     let idx, set_idx = use_state 0 in
     let buttons =
-      let base_classes = [ "bg-gray-300"; "hover:bg-gray-400"; "py-2"; "px-4"; "mt-4"] in
+      let base_classes = [ "bg-gray-300"; "hover:bg-gray-400"; "py-2"; "px-4"; "mt-2"] in
       let inc = El.(button [ txt' "Next" ]) in
       Ev.(listen click (fun _ -> set_idx (fun i -> abs (i + 1) mod sections)) El.(as_target inc));
       let dec = El.(button [ txt' "Previous" ]) in
@@ -257,7 +257,7 @@ module TextViewer = struct
     let block =
       let ele = El.(div []) in
       set_classes ele [ "prose"; "overflow-x-scroll"; "dark:prose-light" ];
-      El.set_inline_style Jstr.(v "height") Jstr.(v "600px") ele;
+      El.set_inline_style Jstr.(v "height") Jstr.(v "550px") ele;
       ele
     in
     let* counter =
