@@ -2,11 +2,11 @@
 
 After protecting existing trees and [rewilding](https://www.rewildingbritain.org.uk/explore-rewilding/what-is-rewilding)
 as much as possible through [natural regeneration](https://www.woodlandtrust.org.uk/plant-trees/natural-regeneration/), there's 
-still a need to plant trees.
+still a need to plant trees. For the potential of rewilding look no further than [Eoghan Daltun's](https://twitter.com/IrishRainforest) incredible work in the South of Ireland in the [Beara Rainforest](http://beararainforest.com/) is amazing.
 
 Not only that, but we need:
 
- - To plant the right kind of trees. More specifically, native trees. Even better are locally-sourced,
+ - To plant the right kind of trees. More specifically, native trees. Even better are locally sourced,
    native trees which provide some of the same benefits of natural regeneration in that we minimise
    potential for bio-security risk (from pests and invasive species) and aim to keep genetic diversity and 
    adaption to specific local environments.
@@ -34,8 +34,8 @@ As far as I can tell this is an example of afforestation (I couldn't find any in
    In fact I dispatched my parents to plant some of them.
  - The Woodland Trust's ongoing work to include important environmental policies in the agenda for the
    Northern Irish government including: planting more native tress, restoring all ancient and long-established woodland,
-   promoting *locally-sourced* trees over imported ones and improving access to green spaces. For more details [visit their site](https://www.woodlandtrust.org.uk/about-us/where-we-work/northern-ireland/ni-manifesto/).
+   promoting *locally sourced* trees over imported ones and improving access to green spaces. For more details [visit their site](https://www.woodlandtrust.org.uk/about-us/where-we-work/northern-ireland/ni-manifesto/).
 
-Access to green space is incredibly important. The [NHS Forest](https://nhsforest.org/) project is evidence of this:
+Access to green space is incredibly important, the pandemic has exacerbated this for many. The [NHS Forest](https://nhsforest.org/) project is evidence of this:
 
 > The NHS Forest works with healthcare professionals and organisations to make green spaces available for health purposes. We carry out practical work on the empirical links between health and the environment. 

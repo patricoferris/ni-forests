@@ -14,4 +14,4 @@ Unfortunately, [Green et al.](https://www.frontiersin.org/articles/10.3389/fpls.
 
 > ... at least 44% of United Kingdom's seagrasses have been lost since 1936, 39% since the 1980's. However, losses over longer time spans may be as high as 92%.
 
-The good folk at Project Seagrass are working hard to raise awareness for the disappearing meadows. Recently, they announced [their first Seagrass nursery](https://www.projectseagrass.org/projects/seagrass-nursery-news-vol-1/).
+The good folk at Project Seagrass are working hard to raise awareness for the disappearing meadows. Recently, they announced [their first Seagrass nursery](https://www.projectseagrass.org/projects/seagrass-nursery-news-vol-1/). The OpenDataNI information seems to suggest more work will be planned to complete mapping in Northern Ireland in particular for Larne Lough and Carlingford Lough.
