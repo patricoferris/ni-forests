@@ -112,7 +112,7 @@ let setup_map map =
   ()
 
 let storage = Brr_io.Storage.local G.window
-let ni_forest_dark = Jstr.v "belfast-tree-dark"
+let ni_forest_dark = Jstr.v "ni-forest-dark"
 
 let dark_mode =
   fun () ->
