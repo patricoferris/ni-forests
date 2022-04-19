@@ -2,6 +2,7 @@
  (alias default)
  (deps
   ../src/js/index.bc.js
+  ../src/trees/js/index.bc.js
   (source_tree ../node_modules)
   index.html
   ../tailwind.config.js)
@@ -36,3 +37,23 @@
     (run echo "<body><div class='content'>")
     (run omd %{markdown})
     (run echo "</div></body>")))))
+
+
+; Belfast Trees
+(rule
+ (alias default)
+ (deps ../src/trees/gen/csv_to_gj.exe ../src/js/raw/trees.csv)
+ (targets ./trees.json ./stats.json)
+ (mode promote)
+ (action
+  (run ../src/trees/gen/csv_to_gj.exe ../src/js/raw/trees.csv %{targets})))
+
+(rule
+ (alias default)
+ (deps ../src/trees/js/index.bc.js)
+ (enabled_if
+  (= %{profile} "release"))
+ (target ./trees.js)
+ (mode promote)
+ (action
+  (copy %{deps} %{target})))
