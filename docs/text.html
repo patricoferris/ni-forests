@@ -1,204 +1,164 @@
 <head><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>@media (min-width: 980px) { .content { width: 33%; margin: auto; }  } @media (max-width: 979px) { .content { width: 90%; margin: auto; } }</style></head>
 <body><div class='content'>
-<h2>Northern Ireland</h2>
+<h2 id="Northern-Ireland">Northern Ireland</h2>
+
 <p>This is Northern Ireland. One of the four <em>countries</em> that make up the United Kingdom. Here are some things you might not have known:</p>
-<ul>
-<li>As of the <a href="https://www.nisra.gov.uk/publications/2011-census-key-statistics-northern-ireland">2011 census</a>
-it has a population of 1,811,000 people.
-</li>
-<li>Lough Neagh is the <a href="https://www.britannica.com/place/Lough-Neagh">largest lake</a> in the <a href="https://www.britannica.com/place/British-Isles">British Isles</a>. I'll let you work out where that is on the map.
-</li>
-<li>It has the <a href="https://www.bbc.co.uk/news/uk-northern-ireland-12322222">most bombed hotel in Europe</a>.
-</li>
-</ul>
-<p>Anyway, this interactive app was made during <a href="https://ukcop26.org/">COP26</a> whilst I was living in Cambridge feeling utterly useless. The idea was to discover more about the &quot;forests&quot; in Northern Ireland.</p>
-<p><em>For the programmers out there, it is all made using <a href="https://v3.ocaml.org">OCaml</a> and is <a href="https://github.com/patricoferris/ni-forests">open-source</a></em>.</p>
-<h2>Forests and Woodland Cover by County</h2>
+<ul><li>As of the <a href='https://www.nisra.gov.uk/publications/2011-census-key-statistics-northern-ireland'>2011 census</a>
+ it has a population of 1,811,000 people.</li><li>Lough Neagh is the <a href='https://www.britannica.com/place/Lough-Neagh'>largest lake</a> in the <a href='https://www.britannica.com/place/British-Isles'>British Isles</a>. I&#39;ll let you work out where that is on the map.</li><li>It has the <a href='https://www.bbc.co.uk/news/uk-northern-ireland-12322222'>most bombed hotel in Europe</a>.</li></ul>
+
+<p>Anyway, this interactive app was made during <a href='https://ukcop26.org/'>COP26</a> whilst I was living in Cambridge feeling utterly useless. The idea was to discover more about the &quot;forests&quot; in Northern Ireland.</p>
+<p><em>For the programmers out there, it is all made using <a href='https://v3.ocaml.org'>OCaml</a> and is <a href='https://github.com/patricoferris/ni-forests'>open-source</a></em>.</p>
+<h2 id="Forests-and-Woodland-Cover-by-County">Forests and Woodland Cover by County</h2>
+
 <p>Northern Ireland is made up of six counties. The map now shows the woodland and forest cover per county.</p>
-<p>The colours indicate the percentage of woodland cover when compared to total land area per county. Totals are also given. The unit of measurement here is the <a href="https://en.wikipedia.org/wiki/Hectare">hectare</a>, for those unfamiliar it is a unit of measurement for area and is equivalent to 10,000 square metres (<code>100m x 100m</code>).</p>
+<p>The colours indicate the percentage of woodland cover when compared to total land area per county. Totals are also given. The unit of measurement here is the <a href='https://en.wikipedia.org/wiki/Hectare'>hectare</a>, for those unfamiliar it is a unit of measurement for area and is equivalent to 10,000 square metres (<code>100m x 100m</code>).</p>
 <p>Taken at face value, Fermanagh is quite clearly ahead of the other counties in terms of percentage woodland cover (15.9%) and Armagh the worst (5.5%).</p>
-<p>Taking these numbers and averaging them out yields <strong>8.9%</strong> forest cover. The EU <a href="https://www.europarl.europa.eu/factsheets/en/sheet/105/the-european-union-and-forests#:~:text=In%20total%2C%20forests%20cover%2037.7,10">quotes around <em>37.7%</em></a> of its land area being forest. Not necessarily a fair comparison given factors like population density, feasible economic activity (e.g. farming) and habitability. But even compared to a <a href="https://www.economist.com/europe/2019/07/20/why-frances-forests-are-getting-bigger">close neighbour like France (~31%)</a> it is really not great.</p>
-<p>Another often overlooked dimension to &quot;forest cover&quot; is the type of forest. <a href="https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/habitats/ancient-woodland/">Ancient woodland</a> (areas wooded since before 1600) is one of the most valuable habitats in the UK. The <a href="https://www.woodlandtrust.org.uk/">Woodland Trust</a> <a href="https://ati.woodlandtrust.org.uk/back-on-the-map">conducted a survey</a> aiming to identify ancient and <em>long-established</em> (~1830) woods in Northern Ireland. They found:</p>
-<blockquote>
-<p>Woods that could be classified with any degree of certainty as ancient were many times scarcer in Northern Ireland than in the rest of the UK, covering only 0.04 per cent of Northern Ireland's land area.</p>
+<p>Taking these numbers and averaging them out yields <strong>8.9%</strong> forest cover. The EU <a href='https://www.europarl.europa.eu/factsheets/en/sheet/105/the-european-union-and-forests#:~:text=In%20total%2C%20forests%20cover%2037.7,10'>quotes around <em>37.7%</em></a> of its land area being forest. Not necessarily a fair comparison given factors like population density, feasible economic activity (e.g. farming) and habitability. But even compared to a <a href='https://www.economist.com/europe/2019/07/20/why-frances-forests-are-getting-bigger'>close neighbour like France (~31%)</a> it is really not great.</p>
+<p>Another often overlooked dimension to &quot;forest cover&quot; is the type of forest. <a href='https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/habitats/ancient-woodland/'>Ancient woodland</a> (areas wooded since before 1600) is one of the most valuable habitats in the UK. The <a href='https://www.woodlandtrust.org.uk/'>Woodland Trust</a> <a href='https://ati.woodlandtrust.org.uk/back-on-the-map'>conducted a survey</a> aiming to identify ancient and <em>long-established</em> (~1830) woods in Northern Ireland. They found:</p>
+<blockquote><p>Woods that could be classified with any degree of certainty as ancient were many times scarcer in Northern Ireland than in the rest of the UK, covering only 0.04 per cent of Northern Ireland&#39;s land area.</p>
 </blockquote>
+
 <p>A truly sad statistic.</p>
-<h2>Protecting Forests</h2>
-<p>Forest management is the study and application of methods aimed
-at increasing or maintaining the health of a collection of trees. The notion of
-a forest is already hard to define (anyone who has read <a href="https://www.waterstones.com/book/the-secret-life-of-trees/colin-tudge/9780141012933">Colin Tudge's &quot;The Secret Life of Trees&quot;</a>
+<h2 id="Protecting-Forests">Protecting Forests</h2>
+
+<p>Forest management is the study and application of methods aimed 
+at increasing or maintaining the health of a collection of trees. The notion of 
+a forest is already hard to define (anyone who has read <a href='https://www.waterstones.com/book/the-secret-life-of-trees/colin-tudge/9780141012933'>Colin Tudge&#39;s &quot;The Secret Life of Trees&quot;</a>
 knows how hard it is to even define a tree), the health of a forest is even harder.</p>
 <p>A clear distinction is given between <em>afforestation</em> (planting trees on land not previously forested)
-and <em>reforestation</em> (planting trees on land already considered forest). The latter
-does not count as increasing the amount of forest, which could be problematic
-when policies require &quot;more forest&quot;. There's a tendency to lean towards afforestation
-through monoculture plantations. <a href="https://young-lab.eemb.ucsb.edu/sites/default/files/2021-07/project_muse_776999.pdf">J. Ruby Harris-Gavin</a> puts it
-bluntly for Ireland's Department of Agriculture, Food, and the Marine (DAFM).</p>
-<blockquote>
-<p>... DAFM are technically creating new forests
+and <em>reforestation</em> (planting trees on land already considered forest). The latter 
+does not count as increasing the amount of forest, which could be problematic 
+when policies require &quot;more forest&quot;. There&#39;s a tendency to lean towards afforestation
+through monoculture plantations. <a href='https://young-lab.eemb.ucsb.edu/sites/default/files/2021-07/project_muse_776999.pdf'>J. Ruby Harris-Gavin</a> puts it 
+bluntly for Ireland&#39;s Department of Agriculture, Food, and the Marine (DAFM).</p>
+<blockquote><p>... DAFM are technically creating new forests
 based on their own respective definitions, they are actually cultivating
 monoculture tree plantations of single species - moreover, they are
 doing so in areas with trees planted too close together for any wildlife
 or other plant life to survive</p>
 </blockquote>
+
 <p>At a superficial level a mantra of &quot;the more trees the better&quot; sounds good, indeed many so-called
 carbon-offsetting companies would have you believe this. But density
 alone is not necessarily a good indication of health. We can fit younger
 trees more compactly in a given space to augment our density score so
 should we chop down all of the old, large trees? Another incredibly important
-metric neatly side-stepped here is <em>biodiversity</em>. This is evident in the
+metric neatly side-stepped here is <em>biodiversity</em>. This is evident in the 
 monoculture plantations mentioned above. Research has already pointed to the devastating impact this can have,
-<a href="https://academic.oup.com/bioscience/article/65/10/1011/245863">Veldman et al.</a> show
+<a href='https://academic.oup.com/bioscience/article/65/10/1011/245863'>Veldman et al.</a> show
 the alarming effect it can have in grassy biomes.</p>
-<p>Forests have economic value and wood is just one of the
+<p>Forests have economic value and wood is just one of the 
 commodities available from forests and plays an important role in how the forest
 is managed. Forests provide a means for regenerative resources to fuel a more sustainable economy.
-But left unprotected, the <a href="https://en.wikipedia.org/wiki/Tragedy_of_the_commons">tragedy of the commons</a>
+But left unprotected, the <a href='https://en.wikipedia.org/wiki/Tragedy_of_the_commons'>tragedy of the commons</a>
 tells us exactly how forests mined for the economic potential will end up. Policy, education and
 local community engagement can go a long way in preventing this.</p>
-<p>In truth, there is no well-defined single answer to how healthy a forest is.
-It is a combination of all of these factors (and more) with different priorities
+<p>In truth, there is no well-defined single answer to how healthy a forest is. 
+It is a combination of all of these factors (and more) with different priorities 
 weighting each depending on which stakeholder group you find yourself in. Turning a blind-eye
 to other stakeholders will not lead to any productive, long-term solutions. This short section
-was somewhat inspired by <a href="https://www.esf.edu/faculty/castello/">John D. Castello</a>'s and <a href="https://www.esf.edu/faculty/teale/">Stephen A. Teale</a>'s &quot;Forest Health: An
+was somewhat inspired by <a href='https://www.esf.edu/faculty/castello/'>John D. Castello</a>&#39;s and <a href='https://www.esf.edu/faculty/teale/'>Stephen A. Teale</a>&#39;s &quot;Forest Health: An
 Integrated Perspective&quot; in which they argue for an objective, scientific method based on mortality rates
-and I'll leave you with a quote towards the end of the book:</p>
-<blockquote>
-<p>The problems facing the world's forests are immense and they will not be solved
+and I&#39;ll leave you with a quote towards the end of the book:</p>
+<blockquote><p>The problems facing the world&#39;s forests are immense and they will not be solved
 any time soon. However if forest health professionals, scientists and policy makers
 cannot come to a consensus on what a healthy forest is, then there is little hope
 that the processes the reduce and degrade a forests can be objectively assessed...</p>
 </blockquote>
-<p>As far as I can tell there's no getting around the importance of local, community knowledge. Methods
+
+<p>As far as I can tell there&#39;s no getting around the importance of local, community knowledge. Methods 
 we use in the future should probably recognise this and preserve as much of it as possible.</p>
-<h2>New Trees in the Belfast Hills</h2>
-<p>After protecting existing trees and <a href="https://www.rewildingbritain.org.uk/explore-rewilding/what-is-rewilding">rewilding</a>
-as much as possible through <a href="https://www.woodlandtrust.org.uk/plant-trees/natural-regeneration/">natural regeneration</a>, there's
-still a need to plant trees. For the potential of rewilding look no further than <a href="https://twitter.com/IrishRainforest">Eoghan Daltun's</a> incredible work in the South of Ireland in the <a href="http://beararainforest.com/">Beara Rainforest</a> is amazing.</p>
+<h2 id="New-Trees-in-the-Belfast-Hills">New Trees in the Belfast Hills</h2>
+
+<p>After protecting existing trees and <a href='https://www.rewildingbritain.org.uk/explore-rewilding/what-is-rewilding'>rewilding</a>
+as much as possible through <a href='https://www.woodlandtrust.org.uk/plant-trees/natural-regeneration/'>natural regeneration</a>, there&#39;s 
+still a need to plant trees. For the potential of rewilding look no further than <a href='https://twitter.com/IrishRainforest'>Eoghan Daltun&#39;s</a> incredible work in the South of Ireland in the <a href='http://beararainforest.com/'>Beara Rainforest</a> is amazing.</p>
 <p>Not only that, but we need:</p>
-<ul>
-<li>
-<p>To plant the right kind of trees. More specifically, native trees. Even better are locally sourced,
-native trees which provide some of the same benefits of natural regeneration in that we minimise
-potential for bio-security risk (from pests and invasive species) and aim to keep genetic diversity and
-adaption to specific local environments.</p>
-</li>
-<li>
-<p>Engage local communities. To reach the scale necessary for success, engagement in local communities is
-paramount. <a href="https://onlinelibrary.wiley.com/doi/10.1111/gcb.15498">Sacco and Hardwick et al.</a> state it
-very well:</p>
-<blockquote>
-<p>For large-scale reforestation projects, engagement of multiple stakeholders is required, to meet
-the diverse goals of enhancing rural livelihoods, biodiversity conservation, carbon sequestration,
+<ul><li>To plant the right kind of trees. More specifically, native trees. Even better are locally sourced,
+ native trees which provide some of the same benefits of natural regeneration in that we minimise
+ potential for bio-security risk (from pests and invasive species) and aim to keep genetic diversity and 
+ adaption to specific local environments.</li><li>Engage local communities. To reach the scale necessary for success, engagement in local communities is 
+ paramount. <a href='https://onlinelibrary.wiley.com/doi/10.1111/gcb.15498'>Sacco and Hardwick et al.</a> state it 
+ very well: </li></ul>
+
+<blockquote><p>For large-scale reforestation projects, engagement of multiple stakeholders is required, to meet 
+the diverse goals of enhancing rural livelihoods, biodiversity conservation, carbon sequestration, 
 watershed protection and the provision of other ecosystem services</p>
 </blockquote>
-<p>In fact their paper is well worth a read. Their comments on &quot;Making it pay&quot; are not very in-depth but overall I think it is a useful read.</p>
-</li>
-<li>
-<p>An incentive to keep the newly planted trees alive whilst simultaneously ensuring
-the system is trusted. We've already seen the exploitation of &quot;tree planting&quot; for
-economic profit or a <a href="https://www.theguardian.com/sustainable-business/2016/aug/20/greenwashing-environmentalism-lies-companies">nice badge for large corporations to flash</a>
-around claiming they are &quot;socially responsible&quot;. See <a href="https://anil.recoil.org/projects/4c">The Cambridge Centre for Carbon Credits</a>
-for some interesting work to establish trusted infrastructure for tackling this.</p>
-</li>
-</ul>
-<p>The map has zoomed to near Cavehill and Belfast Zoo where the Woodland Trust are planning on planting some 150,000 trees
-for a new <a href="https://www.woodlandtrust.org.uk/about-us/where-we-work/northern-ireland/glas-na-bradan-wood/">Glas-na-Bradan Wood</a>.
-As far as I can tell this is an example of afforestation (I couldn't find any information saying it previously was woodland) done correctly.</p>
-<ul>
-<li>There is a real sense of importance of local engagement, both in the naming of the wood and in the
-events for tree-planting. &quot;Our vision is for every tree on the site to be planted by the local community&quot;.
-In fact I dispatched my parents to plant some of them.
-</li>
-<li>The Woodland Trust's ongoing work to include important environmental policies in the agenda for the
-Northern Irish government including: planting more native tress, restoring all ancient and long-established woodland,
-promoting <em>locally sourced</em> trees over imported ones and improving access to green spaces. For more details <a href="https://www.woodlandtrust.org.uk/about-us/where-we-work/northern-ireland/ni-manifesto/">visit their site</a>.
-</li>
-</ul>
-<p>Access to green space is incredibly important, the pandemic has exacerbated this for many. The <a href="https://nhsforest.org/">NHS Forest</a> project is evidence of this:</p>
-<blockquote>
-<p>The NHS Forest works with healthcare professionals and organisations to make green spaces available for health purposes. We carry out practical work on the empirical links between health and the environment.</p>
+
+<p> In fact their paper is well worth a read. Their comments on &quot;Making it pay&quot; are not very in-depth but overall I think it is a useful read.</p>
+<ul><li>An incentive to keep the newly planted trees alive whilst simultaneously ensuring 
+ the system is trusted. We&#39;ve already seen the exploitation of &quot;tree planting&quot; for
+ economic profit or a <a href='https://www.theguardian.com/sustainable-business/2016/aug/20/greenwashing-environmentalism-lies-companies'>nice badge for large corporations to flash</a> 
+ around claiming they are &quot;socially responsible&quot;. See <a href='https://anil.recoil.org/projects/4c'>The Cambridge Centre for Carbon Credits</a>
+ for some interesting work to establish trusted infrastructure for tackling this.</li></ul>
+
+<p>The map has zoomed to near Cavehill and Belfast Zoo where the Woodland Trust are planning on planting some 150,000 trees 
+for a new <a href='https://www.woodlandtrust.org.uk/about-us/where-we-work/northern-ireland/glas-na-bradan-wood/'>Glas-na-Bradan Wood</a>.
+As far as I can tell this is an example of afforestation (I couldn&#39;t find any information saying it previously was woodland) done correctly.</p>
+<ul><li>There is a real sense of importance of local engagement, both in the naming of the wood and in the 
+ events for tree-planting. &quot;Our vision is for every tree on the site to be planted by the local community&quot;.
+ In fact I dispatched my parents to plant some of them.</li><li>The Woodland Trust&#39;s ongoing work to include important environmental policies in the agenda for the
+ Northern Irish government including: planting more native tress, restoring all ancient and long-established woodland,
+ promoting <em>locally sourced</em> trees over imported ones and improving access to green spaces. For more details <a href='https://www.woodlandtrust.org.uk/about-us/where-we-work/northern-ireland/ni-manifesto/'>visit their site</a>.</li></ul>
+
+<p>Access to green space is incredibly important, the pandemic has exacerbated this for many. The <a href='https://nhsforest.org/'>NHS Forest</a> project is evidence of this:</p>
+<blockquote><p>The NHS Forest works with healthcare professionals and organisations to make green spaces available for health purposes. We carry out practical work on the empirical links between health and the environment.</p>
 </blockquote>
-<h2>Carbon beneath your feet</h2>
+<h2 id="Carbon-beneath-your-feet">Carbon beneath your feet</h2>
+
 <p>When discussing terrestrial carbon sinks most people would think of forests with trees and shrubs. For many people in Ireland (and other parts of the UK such as the Fens in eastern England) another important carbon sink they will be familiar with is peatland. In fact only Canada, Finland and Indonesia have more peatland as a percentage of land cover than the island of Ireland.</p>
-<p><a href="https://peatlands.org/peatlands/what-are-peatlands/">Peatland</a> is characterised by its waterlogged ecosystem and is a type of wetland. Peat itself (sometimes called turf) is partially decayed vegetation. There are many <a href="https://www2.le.ac.uk/departments/geography/research/projects/tropical-peatland/what-are-peatlands">types of peatland</a> from the temperate, blanket mires here in the UK to the tropical, peat swamps of Southeast Asia. Estimates indicate that <a href="https://www.iucn.org/resources/issues-briefs/peatlands-and-climate-change">3% of the Earth's surface is made up of peatland</a>.</p>
-<p>Incredibly peatlands store and <a href="https://www.iucn.org/sites/dev/files/peatlands_and_climate_change_issues_brief_final.pdf">sequester more carbon than any other type of terrestrial ecosystem</a>.</p>
-<p>Please note, the peatland displayed on the map is both <a href="https://www.opendatani.gov.uk/dataset/priorityhabitats_peatland">old data (1980s)</a> and has been simplified with the excellent <a href="https://mapshaper.org/">mapshaper</a> to help reduce the size of the data to make the map a little more responsive (although you may have to use the keyboard to move about). A more up to date approach might be to use the <a href="https://storymaps.arcgis.com/stories/68ac541504fc4714b371b1a33e540c95">Peatland Monitoring from Space</a> data.</p>
-<p>Identifying and tracking peatland through satellite imagery is challenging but a worthwhile pursuit. As <a href="https://www2.le.ac.uk/departments/geography/people/kjt7">Prof. Kevin Tansey</a> for <a href="https://www.mdpi.com/journal/remotesensing/special_issues/peatland">the MDPI special issue on the &quot;Remote Sensing of Peatlands&quot; put it</a>:</p>
-<blockquote>
-<p>... Satellite data can be used to establish the extent of peatlands, their elevation and topographic characteristics, the land use/land cover change history, the diversity of the vegetation, the fire disturbance impacts and various measurements associated with the atmosphere, such as emissions, smoke and air quality.</p>
+<p><a href='https://peatlands.org/peatlands/what-are-peatlands/'>Peatland</a> is characterised by its waterlogged ecosystem and is a type of wetland. Peat itself (sometimes called turf) is partially decayed vegetation. There are many <a href='https://www2.le.ac.uk/departments/geography/research/projects/tropical-peatland/what-are-peatlands'>types of peatland</a> from the temperate, blanket mires here in the UK to the tropical, peat swamps of Southeast Asia. Estimates indicate that <a href='https://www.iucn.org/resources/issues-briefs/peatlands-and-climate-change'>3% of the Earth&#39;s surface is made up of peatland</a>.</p>
+<p>Incredibly peatlands store and <a href='https://www.iucn.org/sites/dev/files/peatlands_and_climate_change_issues_brief_final.pdf'>sequester more carbon than any other type of terrestrial ecosystem</a>.</p>
+<p>Please note, the peatland displayed on the map is both <a href='https://www.opendatani.gov.uk/dataset/priorityhabitats_peatland'>old data (1980s)</a> and has been simplified with the excellent <a href='https://mapshaper.org/'>mapshaper</a> to help reduce the size of the data to make the map a little more responsive (although you may have to use the keyboard to move about). A more up to date approach might be to use the <a href='https://storymaps.arcgis.com/stories/68ac541504fc4714b371b1a33e540c95'>Peatland Monitoring from Space</a> data.</p>
+<p>Identifying and tracking peatland through satellite imagery is challenging but a worthwhile pursuit. As <a href='https://www2.le.ac.uk/departments/geography/people/kjt7'>Prof. Kevin Tansey</a> for <a href='https://www.mdpi.com/journal/remotesensing/special_issues/peatland'>the MDPI special issue on the &quot;Remote Sensing of Peatlands&quot; put it</a>:</p>
+<blockquote><p>... Satellite data can be used to establish the extent of peatlands, their elevation and topographic characteristics, the land use/land cover change history, the diversity of the vegetation, the fire disturbance impacts and various measurements associated with the atmosphere, such as emissions, smoke and air quality.</p>
 </blockquote>
-<p>There are some interesting papers in that special issue, in particular <a href="https://www.mdpi.com/2072-4292/9/10/1057">Rahman et al.'s &quot;A New Method to Map Groundwater Table in Peatlands Using Unmanned Aerial Vehicles&quot;</a> is very cool! The author's describe a technique of interpolating known groundwater level (GWL) measurements to estimate the GWL across the peatland. The known measurements are from areas of surface water which are captured using a UAV. They used <a href="https://www.l3harrisgeospatial.com/Software-Technology/ENVI">ENVI</a> to extract the open water sections from the images.</p>
-<p>Peatland can provide other important natural processes as well as acting as a carbon sink. In Co. Tyrone peatland restoration is providing cleaner drinking water by acting as a filtration system before water from Lough Bradan reaches the water treatment facility. This makes the job of treating the water less intensive using fewer chemicals and less electricity in the process. <a href="https://www.bbc.co.uk/news/av/uk-northern-ireland-59150138">BBC NI covered it just recently</a>.</p>
-<p>Northern Ireland does have a peatland restoration and protection plan, their <a href="https://www.daera-ni.gov.uk/sites/default/files/consultations/daera/Northern%20Ireland%20Peatland%20Strategy%202021-2040.%20Consultation%20Document.pdf">consultation document is available online</a>. They note some of the worrying trends that put our peatland at serious threat:</p>
-<blockquote>
-<p>...  Since the early 1980s there has been a trend towards mechanised peat extraction, which has greatly accelerated bog degradation and loss... On bogs, inappropriate levels of grazing and trampling from grazing livestock can have adverse effects on the peatland ecosystem...</p>
+
+<p>There are some interesting papers in that special issue, in particular <a href='https://www.mdpi.com/2072-4292/9/10/1057'>Rahman et al.&#39;s &quot;A New Method to Map Groundwater Table in Peatlands Using Unmanned Aerial Vehicles&quot;</a> is very cool! The author&#39;s describe a technique of interpolating known groundwater level (GWL) measurements to estimate the GWL across the peatland. The known measurements are from areas of surface water which are captured using a UAV. They used <a href='https://www.l3harrisgeospatial.com/Software-Technology/ENVI'>ENVI</a> to extract the open water sections from the images.</p>
+<p>Peatland can provide other important natural processes as well as acting as a carbon sink. In Co. Tyrone peatland restoration is providing cleaner drinking water by acting as a filtration system before water from Lough Bradan reaches the water treatment facility. This makes the job of treating the water less intensive using fewer chemicals and less electricity in the process. <a href='https://www.bbc.co.uk/news/av/uk-northern-ireland-59150138'>BBC NI covered it just recently</a>.</p>
+<p>Northern Ireland does have a peatland restoration and protection plan, their <a href='https://www.daera-ni.gov.uk/sites/default/files/consultations/daera/Northern%20Ireland%20Peatland%20Strategy%202021-2040.%20Consultation%20Document.pdf'>consultation document is available online</a>. They note some of the worrying trends that put our peatland at serious threat:</p>
+<blockquote><p>...  Since the early 1980s there has been a trend towards mechanised peat extraction, which has greatly accelerated bog degradation and loss... On bogs, inappropriate levels of grazing and trampling from grazing livestock can have adverse effects on the peatland ecosystem...</p>
 </blockquote>
+
 <p>But the amount of protection seems woefully low</p>
-<blockquote>
-<p>The best areas of semi-natural peatland habitats in Northern Ireland are designated and protected under National, European and International nature conservation legislation to afford them the greatest protection. However, site designation only covers around 10% of seminatural peatland habitat in Northern Ireland.</p>
+<blockquote><p>The best areas of semi-natural peatland habitats in Northern Ireland are designated and protected under National, European and International nature conservation legislation to afford them the greatest protection. However, site designation only covers around 10% of seminatural peatland habitat in Northern Ireland.</p>
 </blockquote>
-<p>Their objectives and strategies are heading in the right direction, but given the emergency of the climate crisis are worded a little vaguely and cautiously (but perhaps that's just politics).</p>
-<blockquote>
-<ol start="21">
-<li>Encourage the reduction and cessation of the use of peat by all statutory bodies and agencies by end of 2022.
-</li>
-<li>Seek to phase out the use, import and sale of peat compost in Northern Ireland by 2025.
-</li>
-<li>Conduct a review on the potential for a ban on peat extraction on all publicly owned land by 2022.
-</li>
-</ol>
+
+<p>Their objectives and strategies are heading in the right direction, but given the emergency of the climate crisis are worded a little vaguely and cautiously (but perhaps that&#39;s just politics).</p>
+<blockquote><ol><li>Encourage the reduction and cessation of the use of peat by all statutory bodies and agencies by end of 2022.</li><li>Seek to phase out the use, import and sale of peat compost in Northern Ireland by 2025.</li><li>Conduct a review on the potential for a ban on peat extraction on all publicly owned land by 2022.</li></ol></blockquote>
+
+<p>Whilst writing this section, the <a href='https://www.bbc.co.uk/news/uk-59195535'>National Trust joined others in calling for a ban on peat products</a>. Peat is commonly used as compost and in particular for the new trees used in reforestation efforts. This is a good step in the right direction, but the slowness of the response is worrying.</p>
+<h2 id="Forests-in-the-sea">Forests in the sea</h2>
+
+<p>For a completely different notion of forest, we can look beneath the waves. Seagrasses are the <a href='https://www.wildlifetrusts.org/habitats/marine/seagrass#:~:text=Seagrasses%20are%20the%20only%20flowering,terrestrial%20grassland%20%E2%80%93%20an%20underwater%20meadow.&amp;text=It%20has%20been%20calculated%20that,the%20ocean&#39;s%20total%20carbon%20absorption.'>only flowering plant able to live in seawater</a>. Seagrass forms <em>meadows</em> typically in shallower waters just off the coast. According to <a href='https://www.projectseagrass.org/why-seagrass/'>Project Seagrass</a> and <a href='https://www.wildlifetrusts.org/natural-solutions-climate-change/seagrass'>other sources</a>:</p>
+<blockquote><p>Seagrasses occupy 0.1% of the seafloor, yet are responsible for 11% of the organic carbon buried in the ocean.</p>
 </blockquote>
-<p>Whilst writing this section, the <a href="https://www.bbc.co.uk/news/uk-59195535">National Trust joined others in calling for a ban on peat products</a>. Peat is commonly used as compost and in particular for the new trees used in reforestation efforts. This is a good step in the right direction, but the slowness of the response is worrying.</p>
-<h2>Forests in the sea</h2>
-<p>For a completely different notion of forest, we can look beneath the waves. Seagrasses are the <a href="https://www.wildlifetrusts.org/habitats/marine/seagrass#:~:text=Seagrasses%20are%20the%20only%20flowering,terrestrial%20grassland%20%E2%80%93%20an%20underwater%20meadow.&amp;text=It%20has%20been%20calculated%20that,the%20ocean's%20total%20carbon%20absorption.">only flowering plant able to live in seawater</a>. Seagrass forms <em>meadows</em> typically in shallower waters just off the coast. According to <a href="https://www.projectseagrass.org/why-seagrass/">Project Seagrass</a> and <a href="https://www.wildlifetrusts.org/natural-solutions-climate-change/seagrass">other sources</a>:</p>
-<blockquote>
-<p>Seagrasses occupy 0.1% of the seafloor, yet are responsible for 11% of the organic carbon buried in the ocean.</p>
+
+<p>The data plotted from <a href='https://www.opendatani.gov.uk/dataset/subtidal-and-intertidal-seagrass-beds'>OpenDataNI</a> shows subtidal and intertidal seagrass beds in <a href='https://en.wikipedia.org/wiki/Strangford_Lough'>Strangford Lough</a> (a Marine Conservation Zone and the British Isles&#39; largest inlet).</p>
+<p>During the writing of this section, the <a href='https://catchmentbasedapproach.org/learn/seagrass-restoration-handbook/'>Environment Agency</a> released a handbook for the restoration of seagrass. Strangford Lough gets a special, small mention:</p>
+<blockquote><p>Patches of seagrass may also occur within pebble and rubble environments (e.g. Strangford Lough in Northern Ireland), near other sensitive sedimentary habitats such as oyster reefs, maerl beds and mussel beds, and within other coastal habitats such as saltmarsh and mudflats.</p>
 </blockquote>
-<p>The data plotted from <a href="https://www.opendatani.gov.uk/dataset/subtidal-and-intertidal-seagrass-beds">OpenDataNI</a> shows subtidal and intertidal seagrass beds in <a href="https://en.wikipedia.org/wiki/Strangford_Lough">Strangford Lough</a> (a Marine Conservation Zone and the British Isles' largest inlet).</p>
-<p>During the writing of this section, the <a href="https://catchmentbasedapproach.org/learn/seagrass-restoration-handbook/">Environment Agency</a> released a handbook for the restoration of seagrass. Strangford Lough gets a special, small mention:</p>
-<blockquote>
-<p>Patches of seagrass may also occur within pebble and rubble environments (e.g. Strangford Lough in Northern Ireland), near other sensitive sedimentary habitats such as oyster reefs, maerl beds and mussel beds, and within other coastal habitats such as saltmarsh and mudflats.</p>
+
+<p>Unfortunately, <a href='https://www.frontiersin.org/articles/10.3389/fpls.2021.629962/full'>Green et al.</a> have brought to light just how catastrophically the seagrass loss in the UK has been.</p>
+<blockquote><p>... at least 44% of United Kingdom&#39;s seagrasses have been lost since 1936, 39% since the 1980&#39;s. However, losses over longer time spans may be as high as 92%.</p>
 </blockquote>
-<p>Unfortunately, <a href="https://www.frontiersin.org/articles/10.3389/fpls.2021.629962/full">Green et al.</a> have brought to light just how catastrophically the seagrass loss in the UK has been.</p>
-<blockquote>
-<p>... at least 44% of United Kingdom's seagrasses have been lost since 1936, 39% since the 1980's. However, losses over longer time spans may be as high as 92%.</p>
-</blockquote>
-<p>The good folk at Project Seagrass are working hard to raise awareness for the disappearing meadows. Recently, they announced <a href="https://www.projectseagrass.org/projects/seagrass-nursery-news-vol-1/">their first Seagrass nursery</a>. The OpenDataNI information seems to suggest more work will be planned to complete mapping in Northern Ireland in particular for Larne Lough and Carlingford Lough.</p>
-<h2>Conclusion</h2>
+
+<p>The good folk at Project Seagrass are working hard to raise awareness for the disappearing meadows. Recently, they announced <a href='https://www.projectseagrass.org/projects/seagrass-nursery-news-vol-1/'>their first Seagrass nursery</a>. The OpenDataNI information seems to suggest more work will be planned to complete mapping in Northern Ireland in particular for Larne Lough and Carlingford Lough.</p>
+<h2 id="Conclusion">Conclusion</h2>
+
 <p>This was a fun, small project I did during COP26. Nothing revolutionary or new, but maybe you learnt something or were inspired by some of the interesting projects highlighted.
 If there were any takeaways to be had I think they would be.</p>
-<ul>
-<li>Northern Ireland has an amazing amount of diverse, natural habitats that are under serious threat.
-</li>
-<li>When it comes to forests (peatland, seagrass etc.) protecting what we've got is paramount and comes before everything else. A large part of that comes down to education and engaging local communities with the natural world. Beyond this, <em>natural regeneration</em> seems to be the most long-term, effective way to increase the amount of forest. Tree-planting plays a crucial role, but can go wrong fairly easily.
-</li>
-</ul>
-<p>If there are any mistakes or suggestions feel free to contribute directly or <a href="https://github.com/patricoferris/ni-forests">with issues</a>. You can also find me on <a href="https://twitter.com/patricoferris">twitter</a>.</p>
-<h2>Extra Reading</h2>
-<ul>
-<li><a href="https://young-lab.eemb.ucsb.edu/sites/default/files/2021-07/project_muse_776999.pdf">Ireland's Forest Fallacy</a> by J. Ruby Harris-Gavin
-is an excellent, in-depth look at how Ireland's perceived image is far from the ecological truth.
-</li>
-<li><a href="https://www.daera-ni.gov.uk/sites/default/files/publications/daera/Map%20of%20forest%20and%20woodland%20cover%20in%20Northern%20Ireland%202020%20v1.1.pdf">A more fine-grained map of woodland cover</a>.
-</li>
-<li><a href="https://www.mdpi.com/2072-4292/9/10/1057">Peatland monitoring with UAVs</a>
-</li>
-<li><a href="https://www.daera-ni.gov.uk/sites/default/files/consultations/daera/Northern%20Ireland%20Peatland%20Strategy%202021-2040.%20Consultation%20Document.pdf">NI Peatland Strategy Consultation Document</a>
-</li>
-<li><a href="https://4c.cst.cam.ac.uk/">Cambridge Centre for Carbon Credits</a>
-</li>
-<li><a href="https://www.frontiersin.org/articles/10.3389/fpls.2021.629962/full">Historical threat to seagrass paper</a>
-</li>
-</ul>
-<h2>Data Sources</h2>
-<ul>
-<li><a href="https://www.daera-ni.gov.uk/publications/woodland-register">County statistics</a>
-</li>
-<li><a href="https://www.opendatani.gov.uk/dataset/subtidal-and-intertidal-seagrass-beds">Seagrass data</a>
-</li>
-<li><a href="https://www.opendatani.gov.uk/dataset/priorityhabitats_peatland">Peatland data</a>
-</li>
-</ul>
+<ul><li>Northern Ireland has an amazing amount of diverse, natural habitats that are under serious threat.</li><li>When it comes to forests (peatland, seagrass etc.) protecting what we&#39;ve got is paramount and comes before everything else. A large part of that comes down to education and engaging local communities with the natural world. Beyond this, <em>natural regeneration</em> seems to be the most long-term, effective way to increase the amount of forest. Tree-planting plays a crucial role, but can go wrong fairly easily.</li></ul>
+
+<p>If there are any mistakes or suggestions feel free to contribute directly or <a href='https://github.com/patricoferris/ni-forests'>with issues</a>. You can also find me on <a href='https://twitter.com/patricoferris'>twitter</a>.</p>
+<h2 id="Extra-Reading">Extra Reading</h2>
+
+<ul><li><a href='https://young-lab.eemb.ucsb.edu/sites/default/files/2021-07/project_muse_776999.pdf'>Ireland&#39;s Forest Fallacy</a> by J. Ruby Harris-Gavin
+ is an excellent, in-depth look at how Ireland&#39;s perceived image is far from the ecological truth.</li><li><a href='https://www.daera-ni.gov.uk/sites/default/files/publications/daera/Map%20of%20forest%20and%20woodland%20cover%20in%20Northern%20Ireland%202020%20v1.1.pdf'>A more fine-grained map of woodland cover</a>.</li><li><a href='https://www.mdpi.com/2072-4292/9/10/1057'>Peatland monitoring with UAVs</a></li><li><a href='https://www.daera-ni.gov.uk/sites/default/files/consultations/daera/Northern%20Ireland%20Peatland%20Strategy%202021-2040.%20Consultation%20Document.pdf'>NI Peatland Strategy Consultation Document</a></li><li><a href='https://4c.cst.cam.ac.uk/'>Cambridge Centre for Carbon Credits</a></li><li><a href='https://www.frontiersin.org/articles/10.3389/fpls.2021.629962/full'>Historical threat to seagrass paper</a></li></ul>
+
+<h2 id="Data-Sources">Data Sources</h2>
+
+<ul><li><a href='https://www.daera-ni.gov.uk/publications/woodland-register'>County statistics</a></li><li><a href='https://www.opendatani.gov.uk/dataset/subtidal-and-intertidal-seagrass-beds'>Seagrass data</a></li><li><a href='https://www.opendatani.gov.uk/dataset/priorityhabitats_peatland'>Peatland data</a></li></ul>
 </div></body>

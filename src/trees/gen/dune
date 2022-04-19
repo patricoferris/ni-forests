@@ -1,0 +1,3 @@
+(executable
+ (name csv_to_gj)
+ (libraries eio eio_main belfast_tree ezjsonm))

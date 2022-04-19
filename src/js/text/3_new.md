@@ -14,9 +14,9 @@ Not only that, but we need:
    paramount. [Sacco and Hardwick et al.](https://onlinelibrary.wiley.com/doi/10.1111/gcb.15498) state it 
    very well: 
 
-   > For large-scale reforestation projects, engagement of multiple stakeholders is required, to meet 
-   > the diverse goals of enhancing rural livelihoods, biodiversity conservation, carbon sequestration, 
-   > watershed protection and the provision of other ecosystem services
+> For large-scale reforestation projects, engagement of multiple stakeholders is required, to meet 
+> the diverse goals of enhancing rural livelihoods, biodiversity conservation, carbon sequestration, 
+> watershed protection and the provision of other ecosystem services
 
    In fact their paper is well worth a read. Their comments on "Making it pay" are not very in-depth but overall I think it is a useful read.
  - An incentive to keep the newly planted trees alive whilst simultaneously ensuring 

@@ -1,0 +1,4 @@
+(executable
+ (name index)
+ (modes js)
+ (libraries brr brr-lwd leaflet belfast_tree))
